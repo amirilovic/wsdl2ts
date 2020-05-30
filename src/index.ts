@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as soap from 'soap';
 import { saveTs } from './ts-serializer';
 import { parseWsdl } from './wsdl-parser';
