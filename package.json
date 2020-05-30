@@ -1,0 +1,42 @@
+{
+  "name": "@amirilovic/wsdl2ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "NODE_ENV=test jest",
+    "build": "rimraf dist && tsc",
+    "build:watch": "rimraf dist && tsc --watch",
+    "start": "node dist/index.js",
+    "prepublish": "npm run build"
+  },
+  "bin": {
+    "wsdl2ts": "dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "commander": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "soap": "^0.31.0",
+    "ts-morph": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.30",
+    "@types/jest": "^24.0.24",
+    "@types/node": "^12.12.21",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.7.3"
+  }
+}

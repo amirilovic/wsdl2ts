@@ -1,0 +1,10 @@
+*.json
+**/node_modules/**
+**/prod_node_modules/**
+**/coverage/**
+**/__snapshots__/**
+**/*.min.js
+tmp/
+build/
+.yarn/
+*.yaml

@@ -1,0 +1,12 @@
+# Global ignores
+**/samples/**/*.json
+**/mocks/**/*.json
+**/test-samples/**/*.json
+**/test-data/**/*.json
+**/package-lock.json
+**/node_modules/**
+**/prod_node_modules/**
+**/coverage/**
+**/*.min.js
+**/__snapshots__/**
+**/dist/**
