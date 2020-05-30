@@ -13,7 +13,8 @@ import {
   RestrictionElement,
   SchemaElement,
   SequenceElement,
-  SimpleTypeElement
+  SimpleTypeElement,
+  AnyElement
 } from 'soap/lib/wsdl/elements';
 
 export interface TsField {
@@ -170,6 +171,9 @@ function parseElement(
       }
       tsCurrentInterface = tsInterface;
     }
+  } else if (element instanceof AnyElement) {
+    tsCurrentInterface.fields = [];
+    tsCurrentInterface.extends = `Record<string, any>`;
   } else if (element instanceof ComplexTypeElement) {
     if (element.$name) {
       const tsInterface: TsInterface = {
